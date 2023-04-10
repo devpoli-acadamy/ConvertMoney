@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C94C4E029DE45A800DBF102 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4DF29DE45A800DBF102 /* SplashViewModel.swift */; };
+		4C94C4E329DE477300DBF102 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4E229DE477300DBF102 /* SplashView.swift */; };
+		4C94C4E729DE496100DBF102 /* DPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4E629DE496100DBF102 /* DPButton.swift */; };
+		4C94C4EA29DE4C4900DBF102 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4E929DE4C4900DBF102 /* ViewCode.swift */; };
 		4CEF9AB029DE3FE3000C620A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */; };
 		4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */; };
-		4CEF9AB429DE3FE3000C620A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB329DE3FE3000C620A /* ViewController.swift */; };
-		4CEF9AB729DE3FE3000C620A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB529DE3FE3000C620A /* Main.storyboard */; };
 		4CEF9AB929DE3FE7000C620A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB829DE3FE7000C620A /* Assets.xcassets */; };
 		4CEF9ABC29DE3FE7000C620A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF9ABA29DE3FE7000C620A /* LaunchScreen.storyboard */; };
+		4CEF9AC729DE4339000C620A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AC629DE4339000C620A /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C94C4DF29DE45A800DBF102 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		4C94C4E229DE477300DBF102 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		4C94C4E629DE496100DBF102 /* DPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPButton.swift; sourceTree = "<group>"; };
+		4C94C4E929DE4C4900DBF102 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		4CEF9AAC29DE3FE3000C620A /* ConvertMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4CEF9AB329DE3FE3000C620A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4CEF9AB629DE3FE3000C620A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CEF9AB829DE3FE7000C620A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CEF9ABB29DE3FE7000C620A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CEF9ABD29DE3FE7000C620A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CEF9AC629DE4339000C620A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C94C4E429DE494900DBF102 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4E829DE4C3B00DBF102 /* ViewCode */,
+				4C94C4E529DE495600DBF102 /* Components */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4C94C4E529DE495600DBF102 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4E629DE496100DBF102 /* DPButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4C94C4E829DE4C3B00DBF102 /* ViewCode */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4E929DE4C4900DBF102 /* ViewCode.swift */,
+			);
+			path = ViewCode;
+			sourceTree = "<group>";
+		};
 		4CEF9AA329DE3FE3000C620A = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +87,41 @@
 		4CEF9AAE29DE3FE3000C620A /* ConvertMoney */ = {
 			isa = PBXGroup;
 			children = (
-				4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */,
-				4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */,
-				4CEF9AB329DE3FE3000C620A /* ViewController.swift */,
-				4CEF9AB529DE3FE3000C620A /* Main.storyboard */,
+				4C94C4E429DE494900DBF102 /* Helpers */,
+				4CEF9AC429DE4316000C620A /* Features */,
+				4CEF9AC329DE430C000C620A /* Application */,
 				4CEF9AB829DE3FE7000C620A /* Assets.xcassets */,
 				4CEF9ABA29DE3FE7000C620A /* LaunchScreen.storyboard */,
 				4CEF9ABD29DE3FE7000C620A /* Info.plist */,
 			);
 			path = ConvertMoney;
+			sourceTree = "<group>";
+		};
+		4CEF9AC329DE430C000C620A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */,
+				4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4CEF9AC429DE4316000C620A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF9AC529DE432C000C620A /* Splash */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		4CEF9AC529DE432C000C620A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				4CEF9AC629DE4339000C620A /* SplashViewController.swift */,
+				4C94C4DF29DE45A800DBF102 /* SplashViewModel.swift */,
+				4C94C4E229DE477300DBF102 /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +184,6 @@
 			files = (
 				4CEF9ABC29DE3FE7000C620A /* LaunchScreen.storyboard in Resources */,
 				4CEF9AB929DE3FE7000C620A /* Assets.xcassets in Resources */,
-				4CEF9AB729DE3FE3000C620A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +194,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEF9AB429DE3FE3000C620A /* ViewController.swift in Sources */,
+				4CEF9AC729DE4339000C620A /* SplashViewController.swift in Sources */,
 				4CEF9AB029DE3FE3000C620A /* AppDelegate.swift in Sources */,
+				4C94C4E329DE477300DBF102 /* SplashView.swift in Sources */,
+				4C94C4EA29DE4C4900DBF102 /* ViewCode.swift in Sources */,
 				4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */,
+				4C94C4E029DE45A800DBF102 /* SplashViewModel.swift in Sources */,
+				4C94C4E729DE496100DBF102 /* DPButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4CEF9AB529DE3FE3000C620A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CEF9AB629DE3FE3000C620A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4CEF9ABA29DE3FE7000C620A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,11 +342,11 @@
 				DEVELOPMENT_TEAM = BF2YF4NNR9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConvertMoney/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Convert Money";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +370,11 @@
 				DEVELOPMENT_TEAM = BF2YF4NNR9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ConvertMoney/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Convert Money";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
