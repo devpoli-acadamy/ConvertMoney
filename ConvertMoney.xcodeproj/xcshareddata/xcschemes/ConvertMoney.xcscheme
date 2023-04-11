@@ -50,6 +50,13 @@
             ReferencedContainer = "container:ConvertMoney.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "ONBOARDING_FLOW"
+            value = "true"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

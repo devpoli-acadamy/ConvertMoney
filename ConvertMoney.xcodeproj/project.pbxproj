@@ -11,6 +11,14 @@
 		4C94C4E329DE477300DBF102 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4E229DE477300DBF102 /* SplashView.swift */; };
 		4C94C4E729DE496100DBF102 /* DPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4E629DE496100DBF102 /* DPButton.swift */; };
 		4C94C4EA29DE4C4900DBF102 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4E929DE4C4900DBF102 /* ViewCode.swift */; };
+		4C94C4ED29E4D57700DBF102 /* Colors+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4EC29E4D57700DBF102 /* Colors+extensions.swift */; };
+		4C94C4F029E4DE7B00DBF102 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4EF29E4DE7B00DBF102 /* UIView+Extensions.swift */; };
+		4C94C4F329E4E03C00DBF102 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C94C4F229E4E03C00DBF102 /* SF-Pro-Display-Regular.otf */; };
+		4C94C4F529E4E1A300DBF102 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C94C4F429E4E1A300DBF102 /* SF-Pro-Display-Bold.otf */; };
+		4C94C4F729E4E1EA00DBF102 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4F629E4E1EA00DBF102 /* UIFont+Extensions.swift */; };
+		4C94C4FA29E4E76300DBF102 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4F929E4E76300DBF102 /* OnboardingView.swift */; };
+		4C94C4FC29E4E76A00DBF102 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4FB29E4E76A00DBF102 /* OnboardingViewController.swift */; };
+		4C94C4FE29E4E76F00DBF102 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4FD29E4E76F00DBF102 /* OnboardingViewModel.swift */; };
 		4CEF9AB029DE3FE3000C620A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */; };
 		4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */; };
 		4CEF9AB929DE3FE7000C620A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB829DE3FE7000C620A /* Assets.xcassets */; };
@@ -23,6 +31,14 @@
 		4C94C4E229DE477300DBF102 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		4C94C4E629DE496100DBF102 /* DPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPButton.swift; sourceTree = "<group>"; };
 		4C94C4E929DE4C4900DBF102 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		4C94C4EC29E4D57700DBF102 /* Colors+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+extensions.swift"; sourceTree = "<group>"; };
+		4C94C4EF29E4DE7B00DBF102 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		4C94C4F229E4E03C00DBF102 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		4C94C4F429E4E1A300DBF102 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		4C94C4F629E4E1EA00DBF102 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		4C94C4F929E4E76300DBF102 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		4C94C4FB29E4E76A00DBF102 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		4C94C4FD29E4E76F00DBF102 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		4CEF9AAC29DE3FE3000C620A /* ConvertMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +62,9 @@
 		4C94C4E429DE494900DBF102 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4C94C4EE29E4DE7000DBF102 /* Extensions */,
+				4C94C4EB29E4D55A00DBF102 /* DesignSystem */,
 				4C94C4E829DE4C3B00DBF102 /* ViewCode */,
-				4C94C4E529DE495600DBF102 /* Components */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -66,6 +83,43 @@
 				4C94C4E929DE4C4900DBF102 /* ViewCode.swift */,
 			);
 			path = ViewCode;
+			sourceTree = "<group>";
+		};
+		4C94C4EB29E4D55A00DBF102 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4EC29E4D57700DBF102 /* Colors+extensions.swift */,
+				4C94C4E529DE495600DBF102 /* Components */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		4C94C4EE29E4DE7000DBF102 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4EF29E4DE7B00DBF102 /* UIView+Extensions.swift */,
+				4C94C4F629E4E1EA00DBF102 /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C94C4F129E4E00800DBF102 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4F429E4E1A300DBF102 /* SF-Pro-Display-Bold.otf */,
+				4C94C4F229E4E03C00DBF102 /* SF-Pro-Display-Regular.otf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C94C4F829E4E75300DBF102 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4C94C4F929E4E76300DBF102 /* OnboardingView.swift */,
+				4C94C4FB29E4E76A00DBF102 /* OnboardingViewController.swift */,
+				4C94C4FD29E4E76F00DBF102 /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		4CEF9AA329DE3FE3000C620A = {
@@ -100,6 +154,7 @@
 		4CEF9AC329DE430C000C620A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				4C94C4F129E4E00800DBF102 /* Resources */,
 				4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */,
 				4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */,
 			);
@@ -109,6 +164,7 @@
 		4CEF9AC429DE4316000C620A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4C94C4F829E4E75300DBF102 /* Onboarding */,
 				4CEF9AC529DE432C000C620A /* Splash */,
 			);
 			path = Features;
@@ -183,6 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CEF9ABC29DE3FE7000C620A /* LaunchScreen.storyboard in Resources */,
+				4C94C4F329E4E03C00DBF102 /* SF-Pro-Display-Regular.otf in Resources */,
+				4C94C4F529E4E1A300DBF102 /* SF-Pro-Display-Bold.otf in Resources */,
 				4CEF9AB929DE3FE7000C620A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,10 +255,16 @@
 				4CEF9AC729DE4339000C620A /* SplashViewController.swift in Sources */,
 				4CEF9AB029DE3FE3000C620A /* AppDelegate.swift in Sources */,
 				4C94C4E329DE477300DBF102 /* SplashView.swift in Sources */,
+				4C94C4F029E4DE7B00DBF102 /* UIView+Extensions.swift in Sources */,
 				4C94C4EA29DE4C4900DBF102 /* ViewCode.swift in Sources */,
 				4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */,
+				4C94C4FE29E4E76F00DBF102 /* OnboardingViewModel.swift in Sources */,
 				4C94C4E029DE45A800DBF102 /* SplashViewModel.swift in Sources */,
+				4C94C4FC29E4E76A00DBF102 /* OnboardingViewController.swift in Sources */,
 				4C94C4E729DE496100DBF102 /* DPButton.swift in Sources */,
+				4C94C4F729E4E1EA00DBF102 /* UIFont+Extensions.swift in Sources */,
+				4C94C4ED29E4D57700DBF102 /* Colors+extensions.swift in Sources */,
+				4C94C4FA29E4E76300DBF102 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
