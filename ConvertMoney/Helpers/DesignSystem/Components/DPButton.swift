@@ -9,13 +9,26 @@ import UIKit
 
 final class DPButton: UIButton {
 
-    init(){
+    init(action: UIAction){
         super.init(frame: .zero)
 
-        var config = UIButton.Configuration.plain()
-        config.background.backgroundColor = .orange
-        config.background.cornerRadius = 16
+        var config = UIButton.Configuration.filled()
+        config.baseBackgroundColor = .Brand.color1
+        config.buttonSize = .large
+        config.cornerStyle = .capsule
+        config.baseForegroundColor = .Neutral.color6
+
+        var container = AttributeContainer()
+        container.font = .customFont(ofSize: 14, weight: .bold)
+        container.foregroundColor = .Neutral.color6
+        config.attributedTitle = AttributedString(action.title, attributes: container)
+
         configuration = config
+
+        addAction(action, for: .touchUpInside)
+
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
 
     required init?(coder: NSCoder) {

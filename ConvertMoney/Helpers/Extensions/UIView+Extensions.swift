@@ -25,11 +25,29 @@ extension UIView {
         safeAreaLayoutGuide.bottomAnchor
     }
 
-
-
     func layout(of constraints: [NSLayoutConstraint]){
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(constraints)
+    }
+
+    func filledSuperview(_ constant: UIEdgeInsets){
+        guard let superview else { return }
+        layout(of: [
+            topAnchor.constraint(equalTo: superview.topAnchor, constant: constant.top),
+            leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: constant.left),
+            trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -constant.right),
+            bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -constant.bottom),
+        ])
+    }
+
+    func filledSafeSuperview(_ constant: UIEdgeInsets){
+        guard let superview else { return }
+        layout(of: [
+            topAnchor.constraint(equalTo: superview.safeTopAnchor, constant: constant.top),
+            leadingAnchor.constraint(equalTo: superview.safeLeadingAnchor, constant: constant.left),
+            trailingAnchor.constraint(equalTo: superview.safeTrailingAnchor, constant: -constant.right),
+            bottomAnchor.constraint(equalTo: superview.safeBottomAnchor, constant: -constant.bottom),
+        ])
     }
 
 }

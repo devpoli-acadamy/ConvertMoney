@@ -19,6 +19,7 @@
 		4C94C4FA29E4E76300DBF102 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4F929E4E76300DBF102 /* OnboardingView.swift */; };
 		4C94C4FC29E4E76A00DBF102 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4FB29E4E76A00DBF102 /* OnboardingViewController.swift */; };
 		4C94C4FE29E4E76F00DBF102 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C4FD29E4E76F00DBF102 /* OnboardingViewModel.swift */; };
+		4C94C52D29EA23A400DBF102 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94C52C29EA23A400DBF102 /* UIImage+Extensions.swift */; };
 		4CEF9AB029DE3FE3000C620A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */; };
 		4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */; };
 		4CEF9AB929DE3FE7000C620A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CEF9AB829DE3FE7000C620A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		4C94C4F929E4E76300DBF102 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		4C94C4FB29E4E76A00DBF102 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		4C94C4FD29E4E76F00DBF102 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		4C94C52C29EA23A400DBF102 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		4CEF9AAC29DE3FE3000C620A /* ConvertMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CEF9AAF29DE3FE3000C620A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CEF9AB129DE3FE3000C620A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				4C94C4EF29E4DE7B00DBF102 /* UIView+Extensions.swift */,
 				4C94C4F629E4E1EA00DBF102 /* UIFont+Extensions.swift */,
+				4C94C52C29EA23A400DBF102 /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -120,6 +123,13 @@
 				4C94C4FD29E4E76F00DBF102 /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4C94C50B29EA154E00DBF102 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		4CEF9AA329DE3FE3000C620A = {
@@ -164,6 +174,7 @@
 		4CEF9AC429DE4316000C620A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4C94C50B29EA154E00DBF102 /* Start */,
 				4C94C4F829E4E75300DBF102 /* Onboarding */,
 				4CEF9AC529DE432C000C620A /* Splash */,
 			);
@@ -255,6 +266,7 @@
 				4CEF9AC729DE4339000C620A /* SplashViewController.swift in Sources */,
 				4CEF9AB029DE3FE3000C620A /* AppDelegate.swift in Sources */,
 				4C94C4E329DE477300DBF102 /* SplashView.swift in Sources */,
+				4C94C52D29EA23A400DBF102 /* UIImage+Extensions.swift in Sources */,
 				4C94C4F029E4DE7B00DBF102 /* UIView+Extensions.swift in Sources */,
 				4C94C4EA29DE4C4900DBF102 /* ViewCode.swift in Sources */,
 				4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */,
