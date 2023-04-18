@@ -14,7 +14,8 @@ final class DPInput: ViewCode {
     private lazy var contentStackView: UIStackView = {
         let stack = UIStackView([
             titleLabel,
-            inputTextField
+            inputTextField,
+            dropContentView
         ],
                                 axis: .vertical,
                                 distribution: .fill,
@@ -35,6 +36,7 @@ final class DPInput: ViewCode {
     private lazy var inputTextField: CustomTextField = {
         let textField = CustomTextField()
         textField.font = .customFont(ofSize: 22, weight: .bold)
+        textField.textColor = .Brand.color3
         textField.backgroundColor = .init(r: 239, g: 255, b: 250)
         textField.borderStyle = .roundedRect
         textField.layer.cornerRadius = 12
@@ -46,11 +48,38 @@ final class DPInput: ViewCode {
         return textField
     }()
 
+    private lazy var dropContentView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .init(r: 239, g: 255, b: 250)
+        view.layer.cornerRadius = 12
+        view.layer.borderColor = UIColor(r: 37, g: 68, b: 65).cgColor
+        view.layer.borderWidth = 1
+        view.addSubview(dropValueLabel)
+        view.addSubview(dropArrowImage)
+        return view
+    }()
+
+    private lazy var dropValueLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textColor = .Brand.color3
+        label.font = .customFont(ofSize: 22, weight: .bold)
+        return label
+    }()
+
+    private lazy var dropArrowImage: UIImageView = {
+        let imageView = UIImageView(image: .arrowRight)
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .Brand.color5
+        return imageView
+    }()
+
     // MARK: - Properties
 
     var text: String? {
         set(newValue) {
             inputTextField.text = newValue
+            dropValueLabel.text = newValue
         }
         get {
             inputTextField.text
@@ -93,6 +122,22 @@ final class DPInput: ViewCode {
         }
     }
 
+    override var inputView: UIView? {
+        set(newValue){
+            inputTextField.inputView = newValue
+        }
+        get{
+            inputTextField.inputView
+        }
+    }
+
+    private(set) var isDropDown: Bool = false {
+        didSet{
+            dropContentView.isHidden = !isDropDown
+            inputTextField.isHidden = isDropDown
+        }
+    }
+
     // MARK: - Initializer
 
     convenience init(title: String) {
@@ -108,16 +153,37 @@ final class DPInput: ViewCode {
 
     override func setupConstraints() {
         contentStackView.filledSuperview()
+
+        dropValueLabel.layout(of: [
+            dropValueLabel.topAnchor.constraint(equalTo: dropContentView.topAnchor, constant: 16),
+            dropValueLabel.leadingAnchor.constraint(equalTo: dropContentView.leadingAnchor, constant: 22),
+            dropValueLabel.trailingAnchor.constraint(equalTo: dropArrowImage.leadingAnchor, constant: -12),
+            dropValueLabel.bottomAnchor.constraint(equalTo: dropContentView.bottomAnchor, constant: -16),
+        ])
+
+        dropArrowImage.layout(of: [
+            dropArrowImage.heightAnchor.constraint(equalToConstant: 24),
+            dropArrowImage.widthAnchor.constraint(equalTo: dropArrowImage.heightAnchor),
+            dropArrowImage.centerYAnchor.constraint(equalTo: dropContentView.centerYAnchor),
+            dropArrowImage.trailingAnchor.constraint(equalTo: dropContentView.trailingAnchor, constant: -12)
+        ])
     }
 
     override func setupExtras() {
         backgroundColor = .clear
+        isDropDown = false
     }
 
     // MARK: - Public Methods
 
     func updateTitle(_ title: String){
         titleLabel.text = title
+    }
+
+    func addDropAction(target: Any?, action: Selector?){
+        isDropDown = true
+        let tapGesture = UITapGestureRecognizer(target: target, action: action)
+        dropContentView.addGestureRecognizer(tapGesture)
     }
 
 }
