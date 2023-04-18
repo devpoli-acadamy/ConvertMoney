@@ -40,10 +40,10 @@ final class SplashViewController: UIViewController {
 extension SplashViewController: SplashOutput {
 
     func showStart() {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .yellow
-        viewController.modalPresentationStyle = .currentContext
-        present(viewController, animated: true)
+        let onboardingViewController = StartViewController()
+        let navigationController = UINavigationController(rootViewController: onboardingViewController)
+        navigationController.modalPresentationStyle = .currentContext
+        present(navigationController, animated: true)
     }
 
     func showOnboarding() {

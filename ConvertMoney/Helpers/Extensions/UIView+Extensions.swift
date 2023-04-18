@@ -30,7 +30,7 @@ extension UIView {
         NSLayoutConstraint.activate(constraints)
     }
 
-    func filledSuperview(_ constant: UIEdgeInsets){
+    func filledSuperview(_ constant: UIEdgeInsets = .zero){
         guard let superview else { return }
         layout(of: [
             topAnchor.constraint(equalTo: superview.topAnchor, constant: constant.top),
@@ -40,7 +40,7 @@ extension UIView {
         ])
     }
 
-    func filledSafeSuperview(_ constant: UIEdgeInsets){
+    func filledSafeSuperview(_ constant: UIEdgeInsets = .zero){
         guard let superview else { return }
         layout(of: [
             topAnchor.constraint(equalTo: superview.safeTopAnchor, constant: constant.top),

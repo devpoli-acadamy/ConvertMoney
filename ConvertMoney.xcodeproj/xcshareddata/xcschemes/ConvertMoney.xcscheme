@@ -54,7 +54,7 @@
          <EnvironmentVariable
             key = "ONBOARDING_FLOW"
             value = "true"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
    </LaunchAction>

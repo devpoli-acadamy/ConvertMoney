@@ -20,11 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = SplashViewController()
         window?.makeKeyAndVisible()
-
-
-        print(UIFont.fontNames(forFamilyName: "SF Pro Display"))
-
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
