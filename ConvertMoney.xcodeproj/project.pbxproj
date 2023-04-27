@@ -30,6 +30,11 @@
 		4CFAED4929EE118A00EEBE25 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED4529EE118A00EEBE25 /* StartView.swift */; };
 		4CFAED4A29EE118A00EEBE25 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED4629EE118A00EEBE25 /* StartViewModel.swift */; };
 		4CFAED4F29EE1BCA00EEBE25 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED4E29EE1BCA00EEBE25 /* CustomTextField.swift */; };
+		4CFAED7529F9EA7300EEBE25 /* SelectOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED7129F9EA7300EEBE25 /* SelectOptionViewController.swift */; };
+		4CFAED7629F9EA7300EEBE25 /* SelectOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED7229F9EA7300EEBE25 /* SelectOptionView.swift */; };
+		4CFAED7729F9EA7300EEBE25 /* SelectOptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED7329F9EA7300EEBE25 /* SelectOptionViewModel.swift */; };
+		4CFAED7A29F9F33E00EEBE25 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED7929F9F33E00EEBE25 /* UINavigationBar+Extensions.swift */; };
+		4CFAED7C29F9FA0600EEBE25 /* SelectOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFAED7B29F9FA0600EEBE25 /* SelectOptionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		4CFAED4529EE118A00EEBE25 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		4CFAED4629EE118A00EEBE25 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		4CFAED4E29EE1BCA00EEBE25 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		4CFAED7129F9EA7300EEBE25 /* SelectOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionViewController.swift; sourceTree = "<group>"; };
+		4CFAED7229F9EA7300EEBE25 /* SelectOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionView.swift; sourceTree = "<group>"; };
+		4CFAED7329F9EA7300EEBE25 /* SelectOptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionViewModel.swift; sourceTree = "<group>"; };
+		4CFAED7929F9F33E00EEBE25 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		4CFAED7B29F9FA0600EEBE25 /* SelectOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectOptionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 				4C94C4EF29E4DE7B00DBF102 /* UIView+Extensions.swift */,
 				4C94C4F629E4E1EA00DBF102 /* UIFont+Extensions.swift */,
 				4C94C52C29EA23A400DBF102 /* UIImage+Extensions.swift */,
+				4CFAED7929F9F33E00EEBE25 /* UINavigationBar+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +200,7 @@
 		4CEF9AC429DE4316000C620A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				4CFAED7029F9EA4E00EEBE25 /* SelectOption */,
 				4C94C50B29EA154E00DBF102 /* Start */,
 				4C94C4F829E4E75300DBF102 /* Onboarding */,
 				4CEF9AC529DE432C000C620A /* Splash */,
@@ -204,6 +216,17 @@
 				4C94C4E229DE477300DBF102 /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		4CFAED7029F9EA4E00EEBE25 /* SelectOption */ = {
+			isa = PBXGroup;
+			children = (
+				4CFAED7129F9EA7300EEBE25 /* SelectOptionViewController.swift */,
+				4CFAED7229F9EA7300EEBE25 /* SelectOptionView.swift */,
+				4CFAED7329F9EA7300EEBE25 /* SelectOptionViewModel.swift */,
+				4CFAED7B29F9FA0600EEBE25 /* SelectOptionModel.swift */,
+			);
+			path = SelectOption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,16 +310,21 @@
 				4C94C52D29EA23A400DBF102 /* UIImage+Extensions.swift in Sources */,
 				4CFAED4329EE0E4A00EEBE25 /* DPInput.swift in Sources */,
 				4C94C4F029E4DE7B00DBF102 /* UIView+Extensions.swift in Sources */,
+				4CFAED7629F9EA7300EEBE25 /* SelectOptionView.swift in Sources */,
 				4C94C4EA29DE4C4900DBF102 /* ViewCode.swift in Sources */,
+				4CFAED7529F9EA7300EEBE25 /* SelectOptionViewController.swift in Sources */,
+				4CFAED7C29F9FA0600EEBE25 /* SelectOptionModel.swift in Sources */,
 				4CEF9AB229DE3FE3000C620A /* SceneDelegate.swift in Sources */,
 				4C94C4FE29E4E76F00DBF102 /* OnboardingViewModel.swift in Sources */,
 				4C94C4E029DE45A800DBF102 /* SplashViewModel.swift in Sources */,
+				4CFAED7A29F9F33E00EEBE25 /* UINavigationBar+Extensions.swift in Sources */,
 				4C94C4FC29E4E76A00DBF102 /* OnboardingViewController.swift in Sources */,
 				4CFAED4A29EE118A00EEBE25 /* StartViewModel.swift in Sources */,
 				4C94C4E729DE496100DBF102 /* DPButton.swift in Sources */,
 				4C94C4F729E4E1EA00DBF102 /* UIFont+Extensions.swift in Sources */,
 				4C94C4ED29E4D57700DBF102 /* Colors+extensions.swift in Sources */,
 				4C94C4FA29E4E76300DBF102 /* OnboardingView.swift in Sources */,
+				4CFAED7729F9EA7300EEBE25 /* SelectOptionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

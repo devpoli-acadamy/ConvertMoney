@@ -2,12 +2,25 @@
 import UIKit
 
 protocol StartViewLogic: UIView {
+    func setCurrencyInfo(value: String)
+}
 
+protocol StartViewDelegate: AnyObject {
+    func handleCurrencyDidTap()
 }
 
 final class StartView: ViewCode, StartViewLogic {
 
     // MARK: - Components
+
+    private lazy var headerLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Antes de começar,\npreencha as informações"
+        label.numberOfLines = 0
+        label.textColor = .Neutral.color7
+        label.font = .customFont(ofSize: 28, weight: .bold)
+        return label
+    }()
 
     private lazy var currencyInput: DPInput = {
         let input = DPInput(title: "Moeda de conversão")
@@ -31,31 +44,49 @@ final class StartView: ViewCode, StartViewLogic {
 
     // MARK: - Properties    
 
+    private weak var delegate: StartViewDelegate?
+
+    init(delegate: StartViewDelegate) {
+        self.delegate = delegate
+        super.init()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
     // MARK: - Layout
 
     override func setupViews() {
+        addSubview(headerLabel)
         addSubview(currencyInput)
         addSubview(moneyInput)
         addSubview(startButton)
     }
 
     override func setupConstraints() {
+        headerLabel.layout(of: [
+            headerLabel.topAnchor.constraint(equalTo: safeTopAnchor, constant: 22),
+            headerLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
+            headerLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
+        ])
+
         currencyInput.layout(of: [
-            currencyInput.bottomAnchor.constraint(equalTo: moneyInput.topAnchor, constant: -16),
+            currencyInput.topAnchor.constraint(equalTo: headerLabel.bottomAnchor, constant: 62),
             currencyInput.leadingAnchor.constraint(equalTo: moneyInput.leadingAnchor),
             currencyInput.trailingAnchor.constraint(equalTo: moneyInput.trailingAnchor)
         ])
 
         moneyInput.layout(of: [
-            moneyInput.centerYAnchor.constraint(equalTo: centerYAnchor),
-            moneyInput.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-            moneyInput.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+            moneyInput.topAnchor.constraint(equalTo: currencyInput.bottomAnchor, constant: 4),
+            moneyInput.leadingAnchor.constraint(equalTo: headerLabel.leadingAnchor),
+            moneyInput.trailingAnchor.constraint(equalTo: headerLabel.trailingAnchor)
         ])
 
         startButton.layout(of: [
-            startButton.topAnchor.constraint(equalTo: moneyInput.bottomAnchor, constant: 16),
             startButton.leadingAnchor.constraint(equalTo: moneyInput.leadingAnchor),
-            startButton.trailingAnchor.constraint(equalTo: moneyInput.trailingAnchor)
+            startButton.trailingAnchor.constraint(equalTo: moneyInput.trailingAnchor),
+            startButton.bottomAnchor.constraint(equalTo: safeBottomAnchor, constant: -50)
         ])
     }
 
@@ -65,13 +96,16 @@ final class StartView: ViewCode, StartViewLogic {
 
     // MARK: - Public Methods
 
+    func setCurrencyInfo(value: String) {
+        currencyInput.text = value
+    }
+
     // MARK: - Private Methods
 
     // MARK: - Actions
 
     @objc private func onDidDropTap(){
-        print("teste")
-        currencyInput.text = "EUR"
+        delegate?.handleCurrencyDidTap()
     }
 
 }
