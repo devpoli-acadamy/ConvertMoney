@@ -11,7 +11,9 @@ final class OnboardingViewController: UIViewController {
     // MARK: - Properties
 
     private lazy var customView: OnboardingLogic = {
-        let view = OnboardingView()
+        let view = OnboardingView(
+            delegate: self
+        )
         return view
     }()
 
@@ -38,6 +40,16 @@ final class OnboardingViewController: UIViewController {
 
 extension OnboardingViewController: OnboardingOutput {
 
-    
+
+}
+
+extension OnboardingViewController: OnboardingDelegate {
+
+    func onStartDidTap() {
+        let onboardingViewController = StartViewController()
+        let navigationController = UINavigationController(rootViewController: onboardingViewController)
+        navigationController.modalPresentationStyle = .currentContext
+        present(navigationController, animated: true)
+    }
 
 }

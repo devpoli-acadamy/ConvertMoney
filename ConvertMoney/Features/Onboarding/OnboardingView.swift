@@ -11,6 +11,10 @@ protocol OnboardingLogic: UIView {
 
 }
 
+protocol OnboardingDelegate: AnyObject {
+    func onStartDidTap()
+}
+
 final class OnboardingView: ViewCode, OnboardingLogic {
 
     // MARK: - Components
@@ -80,11 +84,26 @@ final class OnboardingView: ViewCode, OnboardingLogic {
     }()
 
     private lazy var startButton: DPButton = {
-        let button = DPButton(action: .init(title: "COMEÇAR", handler: { _ in
-            print("ALLO")
+        let button = DPButton(action: .init(title: "COMEÇAR", handler: { [delegate] _ in
+            delegate?.onStartDidTap()
         }))
         return button
     }()
+
+    // MARK: - Properties
+
+    private weak var delegate: OnboardingDelegate?
+
+    // MARK: - Initialize
+
+    init(delegate: OnboardingDelegate){
+        self.delegate = delegate
+        super.init()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
 
     // MARK: - Layout
 
@@ -99,7 +118,6 @@ final class OnboardingView: ViewCode, OnboardingLogic {
             topStackView.topAnchor.constraint(greaterThanOrEqualTo: safeTopAnchor, constant: 24),
             topStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             topStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-//            topStackView.bottomAnchor.constraint(equalTo: containerFooterView.topAnchor, constant: -12)
         ])
 
         topImageView.layout(of: [
