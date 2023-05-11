@@ -45,7 +45,6 @@ final class DPInput: ViewCode {
         textField.keyboardType = .default
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .sentences
-        textField.addTarget(self, action: #selector(handleInputDidChange), for: .editingChanged)
         return textField
     }()
 
@@ -81,7 +80,6 @@ final class DPInput: ViewCode {
         set(newValue) {
             inputTextField.text = newValue
             dropValueLabel.text = newValue
-            handleInputDidChange()
         }
         get {
             inputTextField.text
@@ -140,21 +138,6 @@ final class DPInput: ViewCode {
         }
     }
 
-    var isMoney: Bool = false {
-        didSet {
-            if isMoney {
-                keyboardType = .numberPad
-                handleInputDidChange()
-            }
-        }
-    }
-
-    var maxValue: Double = .infinity
-    var minValue: Double = .zero
-    var value: String? {
-        text?.filter { c in "0"..."9" ~= c }
-    }
-
     // MARK: - Initializer
 
     convenience init(title: String) {
@@ -203,19 +186,5 @@ final class DPInput: ViewCode {
         dropContentView.addGestureRecognizer(tapGesture)
     }
 
-    // MARK: - Actions
-
-    @objc private func handleInputDidChange(){
-        guard isMoney else {
-            return
-        }
-        let value = Double(value ?? "")
-        let newValue = (value ?? 0.0) / 100
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        let masked = formatter.string(from: NSNumber(value: min(max(newValue, minValue), maxValue)))
-        inputTextField.text = masked
-
-    }
-
 }
+

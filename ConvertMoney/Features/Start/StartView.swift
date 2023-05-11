@@ -31,16 +31,14 @@ final class StartView: ViewCode, StartViewLogic {
 
     private lazy var moneyInput: DPInput = {
         let input = DPInput(title: "Valor do saldo")
-        input.isMoney = true
-        input.minValue = 0
-        input.maxValue = 999_999_999
-        input.text = ""
+        input.keyboardType = .numberPad
+        input.text = "R$ 0,00"
         return input
     }()
 
     private lazy var startButton: DPButton = {
-        DPButton(action: .init(title: "Começar", handler: { [unowned self] _ in
-            print("Começar: \(self.currencyInput.text) - \(self.moneyInput.value) - \(self.moneyInput.text)")
+        DPButton(action: .init(title: "Começar", handler: { _ in
+            print("Começar")
         }))
     }()
 
